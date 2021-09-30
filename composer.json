@@ -1,0 +1,38 @@
+{
+    "name": "agenter-labs/illuminate-uid",
+    "description": "Token manager Laravel",
+    "keywords": [
+        "laravel",
+        "uid"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abdulla",
+            "email": "dev@agenter.com",
+            "homepage": "https://agenter.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/cache": "^8.0"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.15",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+    "psr-4": {
+            "AgenterLab\\Uid\\": "./src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AgenterLab\\Uid\\UidServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true
+}
