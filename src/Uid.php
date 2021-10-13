@@ -40,7 +40,7 @@ class Uid
      */
     public function create(): int {
 
-        $time = time();
+        $time = self::now();
 
         $increment = $this->cache->increment('auto_id_' . $this->instanceId);
 
@@ -51,6 +51,16 @@ class Uid
         $result = ($this->instanceId << 52) | ($time << 12) | ($increment<<0);
 
         return $result;
+    }
+
+    /**
+     * Get time stamp
+     * @return int
+     */
+    static public function now(): int {
+        $timestamp = time()+date("Z");
+
+        return $timestamp;
     }
 
 }
